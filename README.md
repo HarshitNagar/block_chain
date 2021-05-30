@@ -9,7 +9,6 @@ Need to satisfy these properties:
 
 ------------------------------------------------------------
 - *probably should re-write this in GO using channels*
-- creating the network
-- broadcasting blocks and validating them
+- creating the network (start with local - 2 or 3 terminals listening on diff ports and broadcasting to each other)
 - select and implement a consensus algo
 - 
