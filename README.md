@@ -7,6 +7,7 @@ Need to satisfy these properties:
 - Anonymity – Each user in the network has an address generated via the system itself – they do not have an identity. This way, the users can maintain their anonymity (particularly required in a public blockchain structure).
 - Transparency – Since each member of the Blockchain can access the system and monitor the operations, there’s complete transparency in the process. Altering one block would mean that the whole chain has to be changed, and this is highly unlikely to happen (it requires enormous computing power to overwrite the blockchain network). 
 
+------------------------------------------------------------
 
 - creating the network
 - broadcasting blocks and validating them
