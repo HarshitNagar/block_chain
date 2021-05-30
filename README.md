@@ -8,7 +8,7 @@ Need to satisfy these properties:
 - Transparency – Since each member of the Blockchain can access the system and monitor the operations, there’s complete transparency in the process. Altering one block would mean that the whole chain has to be changed, and this is highly unlikely to happen (it requires enormous computing power to overwrite the blockchain network). 
 
 ------------------------------------------------------------
-
+- *probably should write this in GO using channels*
 - creating the network
 - broadcasting blocks and validating them
 - select and implement a consensus algo
