@@ -1,3 +1,5 @@
+This is super basic. To try out run the test.py file. 
+
 # block_chain
 Need to satisfy these properties:
 - Cryptography – Each transaction recorded in a Blockchain is secured through complex cryptographic computations validated by all the stakeholders involved.
