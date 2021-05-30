@@ -7,22 +7,23 @@ class Block:
         self.timestamp = datetime.utcnow()
         self.data = data
         self.previous_block_hash = previous_block_hash
+        self.hash = None
         self.calculate_valid_hash()
 
-    def is_hash_valid(self, hash):
-        return hash.startswith('0' * 3)  # expose this
+    def is_hash_valid(self, temp_hash):
+        return temp_hash.startswith('0' * 4)  # expose this
 
     def to_string(self):
-        return "{0}\t{1}".format(self.data, self.timestamp, self.previous_block_hash)
+        return f"{self.data}\t{self.timestamp}\t{self.previous_block_hash}"
 
     def calculate_valid_hash(self):
-        hash = ''  # should this be configurable ?
+        temp_hash = ''  # should this be configurable ?
         nonce = 0  # should this be configurable ? Read on how to choose nonce
 
-        while not self.is_hash_valid(hash):
+        while not self.is_hash_valid(temp_hash):
             temp = self.to_string() + str(nonce)  # needs to be broken into functions
-            hash = sha256(temp.encode()).hexdigest()  # need of a diff hash algo in future ?
+            temp_hash = sha256(temp.encode()).hexdigest()  # need of a diff hash algo in future ?
             nonce += 1  # might change based on nonce strategy
 
-        self.hash = hash
+        self.hash = temp_hash
 # hash usage might not be proper. have to check

@@ -8,7 +8,7 @@ class Blockchain:
 
     def set_genesis_block(self):
         data = "g_e_n_e_s_i_s__b_l_o_c_k"  # no reason. bakchodi
-        previous_block_hash = '0'*32  # 32/64/128 ? expose or not ?
+        previous_block_hash = '0'*64  # 32/64/128 ? expose or not ?
         genesis_block = Block(data = data, previous_block_hash = previous_block_hash)
 
         self.blocks.append(genesis_block)
@@ -24,3 +24,6 @@ class Blockchain:
         new_block = Block(data = data, previous_block_hash = previous_block_hash)
 
         self.blocks.append(new_block)
+
+    def get_blocks(self):
+        return self.blocks
